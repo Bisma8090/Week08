@@ -153,7 +153,7 @@ To run this project locally, follow the steps below carefully.
 First, clone the project repository from GitHub:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Bisma8090/Week08/tree/main/agents-intro
 cd agents-intro
 ```
 ### 2. Install Dependencies
@@ -178,19 +178,45 @@ node hello.js
 ```bash
 node index.js
 ```
-### 1. Clone Repository
+---
 
-First, clone the project repository from GitHub:
+##  How to Use
 
-```bash
-git clone <your-repo-url>
-cd agents-intro
+After starting the CLI, you can enter queries.
+##  Examples
+
+### Math
+```text
+What is 15 * 3 + 2?
 ```
-### 1. Clone Repository
-
-First, clone the project repository from GitHub:
-
-```bash
-git clone <your-repo-url>
-cd agents-intro
+### Programming
+```text
+Explain async/await in JavaScript
 ```
+### General
+```text
+What is Newton's second law?
+```
+---
+
+##  Tracing
+
+You can control tracing in CLI using the following commands:
+```bash
+trace on
+ ```
+or 
+```bash
+trace off
+ ```
+ Tracing helps in debugging and understanding how agents work internally.
+
+ ## Conclusion
+
+This project demonstrates a complete Agentic AI system using OpenAI Agents SDK.
+It successfully implements:
+- Multi-agent architecture
+- Intelligent routing system
+- Tool-based computation
+- Guardrail safety layer
+- Structured execution pipeline
