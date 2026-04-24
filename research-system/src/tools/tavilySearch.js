@@ -1,6 +1,5 @@
 import { tool } from "@openai/agents";
 import { tavily } from "@tavily/core";
-import { z } from "zod";
 
 const client = tavily({ apiKey: process.env.TAVILY_API_KEY });
 
@@ -9,13 +8,21 @@ export const resetSearchCount = () => { searchCount = 0; };
 
 export const tavilySearchTool = tool({
   name: "tavily_search",
-  description: "Search the web for factual, up-to-date information on a topic. Returns key findings and source URLs. IMPORTANT: Call this tool ONE time with ONE query string. Do NOT pass arrays or multiple queries in a single call.",
-  parameters: z.object({
-    query: z.string().describe("A single search query string to look up. Must be a plain string, not an array."),
-  }),
+  description: "Search the web for factual, up-to-date information. Call once with a single plain text query string.",
+  parameters: {
+    type: "object",
+    properties: {
+      query: {
+        type: "string",
+        description: "A single search query string.",
+      },
+    },
+    required: ["query"],
+    additionalProperties: false,
+  },
   execute: async ({ query }) => {
     if (searchCount >= 5) {
-      return { error: "Max search limit (5) reached for this run." };
+      return JSON.stringify({ error: "Max search limit (5) reached for this run." });
     }
     searchCount++;
 
@@ -30,10 +37,10 @@ export const tavilySearchTool = tool({
       url: r.url,
     }));
 
-    return {
+    return JSON.stringify({
       answer: response.answer ?? "",
       findings,
       searchesUsed: searchCount,
-    };
+    });
   },
 });
