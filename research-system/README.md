@@ -31,7 +31,7 @@ Structured Markdown Report
 npm install
 ```
 
-2. Copy `.env.example` to `.env` and fill in your keys:
+2. and fill in your keys in .env:
 ```bash
 cp  .env
 ```
@@ -53,128 +53,112 @@ Get your keys:
 npm start
 ```
 
-Custom query:
+Pass a custom query directly:
 ```bash
-npm start "Compare PayPal vs Stripe for an e-commerce store in Europe"
+npm start "Compare Stripe vs Razorpay for a SaaS in Pakistan"
+```
+
+Or run without arguments to be prompted:
+```bash
+npm start
+# Enter your research query: Compare Stripe vs Razorpay for a SaaS in Pakistan
 ```
 
 ## Example Output
 
 ```
 
+🔍 Query: Compare Stripe vs Razorpay for a SaaS in Pakistan
+────────────────────────────────────────────────────────────
+🤖 Starting multi-agent research pipeline...
+
+🔎 Step 1/2: Research Agent gathering data...
+
+✍️  Step 2/2: Writer Agent producing report...
+
 
 📄 FINAL REPORT
 ════════════════════════════════════════════════════════════
-{"findings": [
-    "Stripe charges 1.4% + €0.25 for European card payments, while PayPal typically charges around 3.1% for similar transactions in Europe.",
-    "For small orders, the difference is minor, but larger orders see significant 
-cost differences.",
-    "Stripe generally offers lower domestic card fees than PayPal, but both provide robust security features for e-commerce in Europe.",
-    "Stripe supports more payment options, while PayPal excels in micropayments.",    "Stripe offers more technical control and flexibility, while PayPal provides broader consumer reach and convenience for quick setups in Europe.",
-    "Stripe's customer support is developer-focused, whereas PayPal's is geared towards end users.",
-    "Stripe is preferred by tech-savvy businesses, while PayPal suits those prioritizing ease of use."
-],
-"sources": [
-    "https://payrequest.io/blog/paypal-vs-stripe-small-business-2026",
-    "https://www.reddit.com/r/ecommerce/comments/bqkmj7/paypal_vs_stripe_do_customers_care/",
-    "https://justt.ai/blog/stripe-vs-paypal-ecommerce-merchants/",
-    "https://www.ionos.co.uk/digitalguide/online-marketing/online-sales/stripe-vs-paypal/",
-    "https://lovable.dev/guides/stripe-vs-paypal-payment-processor-comparison",   
-    "https://electroiq.com/stats/paypal-vs-stripe-statistics/",
-    "https://www.jotform.com/blog/stripe-vs-paypal/",
-    "https://tipalti.com/resources/learn/stripe-vs-paypal/",
-    "https://wise.com/gb/blog/stripe-payments-vs-paypal"
-]
-}
-...
+## Overview
+The report compares Stripe and Razorpay for a SaaS in Pakistan, highlighting their differences and pros and cons. Stripe offers superior international support, while Razorpay is more cost-effective for local Pakistani transactions. However, Razorpay is not directly available in Pakistan, and alternatives like XPay are used instead.
+
+## Key Differences
+* Stripe charges around 2.9% + 30 paisa per transaction
+* Razorpay charges 2% + 1.5% in Pakistan (note: may vary as Razorpay is not directly available in Pakistan)
+* International support: Stripe is superior, while Razorpay's availability is limited in Pakistan
+
+## Pros & Cons
+The pros and cons of using Stripe and Razorpay in Pakistan can be summarized as follows:
+- Stripe: superior international support, but higher transaction fees
+- Razorpay (or its alternatives): more cost-effective for local transactions, but 
+limited international support and availability in Pakistan
+
+## Recommendation
+For SaaS payment processing in Pakistan, consider reliable options like JazzCash, 
+EasyPaisa, and LemonSqueezy. Weigh the importance of international support against transaction fees when deciding between Stripe and Razorpay (or its alternatives).
+The pros and cons of using Stripe and Razorpay in Pakistan can be summarized as follows:
+- Stripe: superior international support, but higher transaction fees
+- Razorpay (or its alternatives): more cost-effective for local transactions, but 
+limited international support and availability in Pakistan
+
+## Recommendation
+For SaaS payment processing in Pakistan, consider reliable options like JazzCash, 
+EasyPaisa, and LemonSqueezy. Weigh the importance of international support against transaction fees when deciding between Stripe and Razorpay (or its alternatives).
+
+
+## Recommendation
+For SaaS payment processing in Pakistan, consider reliable options like JazzCash, 
+EasyPaisa, and LemonSqueezy. Weigh the importance of international support against transaction fees when deciding between Stripe and Razorpay (or its alternatives).
+
+ transaction fees when deciding between Stripe and Razorpay (or its alternatives).
+
+
+## Sources
+* https://www.reddit.com/r/SaaS/comments/1mmbobe/stripe_vs_razorpay_for_an_indian_saas_planning_to/
+* https://www.xstak.com/blog/payment-gateways-in-pakistan
+* https://www.playto.so/upi-payments-platform-for-private-saas-agency-in-pakistan 
+* https://razorpay.com/pricing/
 ```
+
+
+## Example Output
+
+```
+
+🔍 Query: how do you see iran vs US war?
+────────────────────────────────────────────────────────────
+🤖 Starting multi-agent research pipeline...
+
+🔎 Step 1/2: Research Agent gathering data...
+
+✍️  Step 2/2: Writer Agent producing report...
+
+
+📄 FINAL REPORT
+════════════════════════════════════════════════════════════
+## Overview
+The research data provides insights into the potential conflict between Iran and the US, including historical context and current events. The findings suggest that 
+the US has been involved in military operations against Iran, and there are concerns about the division of war powers between Congress and the White House.
+
+## Key Differences
+* The US has been involved in various military operations against Iran, including 
+the 2025 United States strikes on Iranian nuclear sites.
+* The US Constitution divides war powers between Congress and the White House, with only Congress able to declare war.
+* The conflict has weakened the United States' position in the great power rivalries of the 21st century.
+
+## Pros & Cons
+The pros and cons of a potential Iran-US war are not explicitly stated in the research data. However, it can be inferred that the conflict has had negative consequences for the US, including damaging its position in the great power rivalries. On 
+the other hand, the US may have achieved some of its objectives, such as restricting the influence of its great power rivals.
+
+## Recommendation
+Based on the research data, it is recommended that the US exercise caution in its 
+dealings with Iran and consider the potential consequences of military action. The US should also ensure that it is acting in accordance with its Constitution and respecting the division of war powers between Congress and the White House.        
+
+## Sources
+* https://en.wikipedia.org/wiki/Iran%E2%80%93United_States_war
+* https://www.youtube.com/watch?v=ajf10YY-bYc
+* https://theconversation.com/4-ways-the-war-in-iran-has-weakened-the-united-states-in-the-great-power-game-279069
+* https://www.youtube.com/watch?v=2UBNPtkeyYE
+* https://arabcenterdc.org/resource/the-us-israel-war-on-iran-analyses-and-perspectives/
+
 ---
-Custom query:
-```bash
- how do you see iran vs US WAR?
-```
-## Example Output
-
-```
-🤖 Starting multi-agent research pipeline...
-
-🔎 Step 1/2: Researching...
-
-❌ Error: 400 Failed to call a function. Please adjust your prompt. See 'failed_genration' for more details.
-
-eration' for more details.
-...
-```
-
-Custom query:
-```bash
- geopolitical tensions between Iran and the United States
-```
-## Example Output
-
-🤖 Starting multi-agent research pipeline...
-
-🔎 Step 1/2: Researching...
-✍️  Step 2/2: Writing report...
-
-```
-
-📄 FINAL REPORT
-════════════════════════════════════════════════════════════
-### 1. Overview
-The relationship between the United States and Iran has been hostile and contentious, with a history of support, interference, and open hostility. Significant events include the 1979 hostage crisis and failed nuclear negotiations. The tension between the two countries has been persistent since the 1979 Iranian Revolution, with recent issues focusing on nuclear programs and sanctions.
-
-### 2. Key Differences
-The key aspects of the US-Iran relationship can be summarized as follows:
-* Historical antagonism since the 1979 Iranian Revolution
-* Ongoing issues with nuclear programs
-* Economic sanctions imposed by the US, including those targeting Iran's financial and economic sectors in 2020
-
-### 3. Pros & Cons
-The pros and cons of the current US-Iran relationship are not explicitly stated in the provided findings. However, it can be inferred that:
-* The sanctions have significant humanitarian impacts, restricting access to healthcare and education
-* The relationship is marked by hostility and tension, which can lead to further conflict and instability
-
-### 4. Recommendation
-Based on the provided findings, it is recommended that the US and Iran work towards resolving their differences and improving their relationship. This could involve negotiations on nuclear programs and the easing of economic sanctions, which would help to alleviate humanitarian impacts and reduce tension between the two countries.
-
-### 5. Sources
-The sources used in this report include:
-* https://www.youtube.com/watch?v=mMqxwbJKsAI
-* https://www.amu.apus.edu/area-of-study/legal-studies/resources/us-iran-relations/
-* https://en.wikipedia.org/wiki/Iran%E2%80%93United_States_relations
-* https://www.congress.gov/crs-product/R47321
-* https://www.bbc.com/news/topics/cv3nj70d4mqt
-s resolving their differences and improving their relationship. This could involve negotiations on nuclear programs and the easing of economic sanctions, which would help to alleviate humanitarian impacts and reduce tension between the two countries.
-
-### 5. Sources
-The sources used in this report include:
-* https://www.youtube.com/watch?v=mMqxwbJKsAI
-* https://www.amu.apus.edu/area-of-study/legal-studies/resources/us-iran-relations/
-* https://en.wikipedia.org/wiki/Iran%E2%80%93United_States_relations
-* https://www.congress.gov/crs-product/R47321
-* https://www.bbc.com/news/topics/cv3nj70d4mqt
-
-### 5. Sources
-The sources used in this report include:
-* https://www.youtube.com/watch?v=mMqxwbJKsAI
-* https://www.amu.apus.edu/area-of-study/legal-studies/resources/us-iran-relations/
-* https://en.wikipedia.org/wiki/Iran%E2%80%93United_States_relations
-* https://www.congress.gov/crs-product/R47321
-* https://www.bbc.com/news/topics/cv3nj70d4mqt
-* https://www.amu.apus.edu/area-of-study/legal-studies/resources/us-iran-relations/
-* https://en.wikipedia.org/wiki/Iran%E2%80%93United_States_relations
-* https://www.congress.gov/crs-product/R47321
-* https://www.bbc.com/news/topics/cv3nj70d4mqt
-/
-* https://en.wikipedia.org/wiki/Iran%E2%80%93United_States_relations
-* https://www.congress.gov/crs-product/R47321
-* https://www.bbc.com/news/topics/cv3nj70d4mqt
-* https://www.congress.gov/crs-product/R47321
-* https://www.bbc.com/news/topics/cv3nj70d4mqt
-* https://www.bbc.com/news/topics/cv3nj70d4mqt
-* https://www.cfr.org/articles/us-relations-iran
-* https://truthout.org/articles/us-expands-economic-fury-sanctions-on-iran-as-trump-declares-ceasefire/
-* https://en.wikipedia.org/wiki/United_States_sanctions_against_Iran
-* https://www.nortonrosefulbright.com/en-us/knowledge/publications/7b2febfd/increased-us-sanctions-on-iran
-
