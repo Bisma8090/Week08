@@ -1,0 +1,21 @@
+{
+  "name": "research-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@openai/agents": "^0.8.5",
+    "@tavily/core": "^0.7.2",
+    "dotenv": "^17.4.2",
+    "groq-sdk": "^1.1.2",
+    "openai": "^6.34.0",
+    "zod": "^4.0.0"
+  }
+}
