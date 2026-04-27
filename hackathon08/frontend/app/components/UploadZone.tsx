@@ -59,15 +59,15 @@ export function UploadZone({ onUploaded }: Props) {
         {isLoading ? (
           <Box>
             <CircularProgress size={32} />
-            <Typography variant="body2" mt={1.5} color="text.secondary" fontWeight={500}>
+            <Typography variant="body2" sx={{ mt: 1.5, color: 'text.secondary', fontWeight: 500 }}>
               Uploading & analyzing...
             </Typography>
           </Box>
         ) : (
           <Box>
             <CloudUploadIcon sx={{ fontSize: 36, color: 'primary.main', mb: 1 }} />
-            <Typography variant="body1" fontWeight={700}>Drop PDF here</Typography>
-            <Typography variant="body2" color="text.secondary" mt={0.5}>
+            <Typography variant="body1" sx={{ fontWeight: 700 }}>Drop PDF here</Typography>
+            <Typography variant="body2" sx={{ color: 'text.secondary', mt: 0.5 }}>
               or click to browse
             </Typography>
           </Box>

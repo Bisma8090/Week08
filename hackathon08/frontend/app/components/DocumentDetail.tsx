@@ -76,7 +76,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
       )}
 
       {/* Header */}
-      <Box mb={5}>
+      <Box sx={{ mb: 5 }}>
         <Typography
           variant="h3"
           sx={{
@@ -117,7 +117,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
       >
         {doc.sections && doc.sections.length > 0 && (
           <Paper elevation={0} sx={{ p: { xs: 3, md: 4 }, borderRadius: 3, border: '1px solid', borderColor: 'grey.800' }}>
-            <Typography variant="overline" color="text.secondary" display="block" mb={2.5} letterSpacing="0.12em" fontSize="0.8rem">
+            <Typography variant="overline" sx={{ color: 'text.secondary', display: 'block', mb: 2.5, letterSpacing: '0.12em', fontSize: '0.8rem' }}>
               Sections
             </Typography>
             <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
@@ -130,7 +130,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
 
         {doc.themes && doc.themes.length > 0 && (
           <Paper elevation={0} sx={{ p: { xs: 3, md: 4 }, borderRadius: 3, border: '1px solid', borderColor: 'grey.800' }}>
-            <Typography variant="overline" color="text.secondary" display="block" mb={2.5} letterSpacing="0.12em" fontSize="0.8rem">
+            <Typography variant="overline" sx={{ color: 'text.secondary', display: 'block', mb: 2.5, letterSpacing: '0.12em', fontSize: '0.8rem' }}>
               Themes
             </Typography>
             <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
@@ -143,7 +143,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
 
         {doc.entities && doc.entities.length > 0 && (
           <Paper elevation={0} sx={{ p: { xs: 3, md: 4 }, borderRadius: 3, border: '1px solid', borderColor: 'grey.800' }}>
-            <Typography variant="overline" color="text.secondary" display="block" mb={2.5} letterSpacing="0.12em" fontSize="0.8rem">
+            <Typography variant="overline" sx={{ color: 'text.secondary', display: 'block', mb: 2.5, letterSpacing: '0.12em', fontSize: '0.8rem' }}>
               Key Entities
             </Typography>
             <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
@@ -158,7 +158,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
       <Divider sx={{ mb: 6 }} />
 
       {/* Summary Section */}
-      <Box mb={7}>
+      <Box sx={{ mb: 7 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 4, flexWrap: 'wrap', gap: 2 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Box sx={{
@@ -170,7 +170,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
             }}>
               <SummarizeIcon sx={{ color: 'primary.main', fontSize: { xs: 24, md: 28 } }} />
             </Box>
-            <Typography variant="h5" fontWeight={700} sx={{ fontSize: { xs: '1.3rem', md: '1.6rem' } }}>
+            <Typography variant="h5" sx={{ fontWeight: 700, fontSize: { xs: '1.3rem', md: '1.6rem' } }}>
               Summary
             </Typography>
           </Box>
@@ -197,8 +197,8 @@ export function DocumentDetail({ docId }: { docId: string }) {
               {activeSummary}
             </Typography>
             {activeHighlights && activeHighlights.length > 0 && (
-              <Box mt={4}>
-                <Typography color="primary" mb={2} fontWeight={700} fontSize={{ xs: '1rem', md: '1.1rem' }}>
+                <Box sx={{ mt: 4 }}>
+                <Typography sx={{ color: 'primary.main', mb: 2, fontWeight: 700, fontSize: { xs: '1rem', md: '1.1rem' } }}>
                   Highlights
                 </Typography>
                 <List dense disablePadding>
@@ -220,7 +220,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
             border: '1px dashed', borderColor: 'grey.700', borderRadius: 3,
             display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 140,
           }}>
-            <Typography color="text.disabled" fontSize={{ xs: '0.95rem', md: '1.05rem' }}>
+            <Typography sx={{ color: 'text.disabled', fontSize: { xs: '0.95rem', md: '1.05rem' } }}>
               Click "Generate Summary" to analyze this document
             </Typography>
           </Paper>
@@ -230,7 +230,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
       <Divider sx={{ mb: 6 }} />
 
       {/* Q&A Section */}
-      <Box pb={6}>
+      <Box sx={{ pb: 6 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 4 }}>
           <Box sx={{
             width: { xs: 44, md: 52 },
@@ -241,7 +241,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
           }}>
             <QuestionAnswerIcon sx={{ color: 'primary.main', fontSize: { xs: 24, md: 28 } }} />
           </Box>
-          <Typography variant="h5" fontWeight={700} sx={{ fontSize: { xs: '1.3rem', md: '1.6rem' } }}>
+          <Typography variant="h5" sx={{ fontWeight: 700, fontSize: { xs: '1.3rem', md: '1.6rem' } }}>
             Ask the Document
           </Typography>
         </Box>
@@ -288,7 +288,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
             border: '1px dashed', borderColor: 'grey.700', borderRadius: 3,
             display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 120,
           }}>
-            <Typography color="text.disabled" fontSize={{ xs: '0.95rem', md: '1.05rem' }}>
+            <Typography sx={{ color: 'text.disabled', fontSize: { xs: '0.95rem', md: '1.05rem' } }}>
               Ask a question to get started
             </Typography>
           </Paper>
@@ -300,8 +300,8 @@ export function DocumentDetail({ docId }: { docId: string }) {
             mb: 3,
             border: '1px solid', borderColor: 'grey.800', borderRadius: 3,
           }}>
-            <Typography color="primary" fontWeight={700} mb={2.5}
-              sx={{ lineHeight: 1.6, fontSize: { xs: '1rem', md: '1.1rem' } }}>
+            <Typography sx={{ color: 'primary.main', fontWeight: 700, mb: 2.5,
+              lineHeight: 1.6, fontSize: { xs: '1rem', md: '1.1rem' } }}>
               Q: {qa.question}
             </Typography>
             <Typography sx={{ whiteSpace: 'pre-wrap', lineHeight: 2, fontSize: { xs: '0.97rem', md: '1.05rem' } }}>
@@ -309,7 +309,7 @@ export function DocumentDetail({ docId }: { docId: string }) {
             </Typography>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 3 }}>
               <SmartToyIcon sx={{ fontSize: 16, color: 'text.disabled' }} />
-              <Typography variant="caption" color="text.disabled" fontSize="0.82rem">
+              <Typography variant="caption" sx={{ color: 'text.disabled', fontSize: '0.82rem' }}>
                 Handled by: {qa.agent}
               </Typography>
             </Box>
