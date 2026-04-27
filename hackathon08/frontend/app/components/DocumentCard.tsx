@@ -32,7 +32,7 @@ export function DocumentCard({ doc, selected, onClick }: Props) {
     >
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
         <ArticleIcon sx={{ color: 'primary.main', fontSize: 26, flexShrink: 0 }} />
-        <Typography variant="body1" fontWeight={600} noWrap flex={1} fontSize="0.97rem">
+        <Typography variant="body1" noWrap sx={{ fontWeight: 600, flex: 1, fontSize: '0.97rem' }}>
           {doc.originalName}
         </Typography>
         <Chip
