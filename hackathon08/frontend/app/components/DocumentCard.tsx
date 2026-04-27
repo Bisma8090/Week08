@@ -43,7 +43,7 @@ export function DocumentCard({ doc, selected, onClick }: Props) {
         />
       </Box>
       {doc.documentType && (
-        <Typography variant="body2" color="text.secondary" mt={1} display="block" fontSize="0.88rem">
+        <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1, display: 'block', fontSize: '0.88rem' }}>
           {doc.documentType}
         </Typography>
       )}
