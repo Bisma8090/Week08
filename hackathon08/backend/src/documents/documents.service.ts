@@ -3,14 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { run, InputGuardrailTripwireTriggered } from '@openai/agents';
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { PDFParse } = require('pdf-parse');
-async function pdfParse(buffer: Buffer): Promise<{ text: string }> {
-  const parser = new PDFParse({ data: new Uint8Array(buffer) });
-  await parser.load();
-  const result = await parser.getText();
-  const text = typeof result === 'string' ? result : (result?.text ?? '');
-  return { text };
-}
+const pdfParse = require('pdf-parse');
 import { PdfDocument, DocumentDocument } from './schemas/document.schema';
 import { setDocumentContext } from '../agents/tools';
 import { createDocumentAnalysisAgent, createSummaryAgent, routerAgent } from '../agents/agents';
