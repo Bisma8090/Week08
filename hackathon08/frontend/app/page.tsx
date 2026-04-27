@@ -36,7 +36,7 @@ function SidebarContent({
             <Typography variant="h6" sx={{ fontWeight: 800, fontSize: '1.1rem', lineHeight: 1.2 }}>
               PDF Intelligence
             </Typography>
-            <Typography variant="caption" color="text.secondary" fontSize="0.75rem">
+            <Typography variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>
               Multi-Agent AI Platform
             </Typography>
           </Box>
