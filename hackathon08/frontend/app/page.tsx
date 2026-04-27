@@ -54,7 +54,7 @@ function SidebarContent({
         </Typography>
         {isLoading && <CircularProgress size={22} sx={{ m: 2 }} />}
         {docs?.map((doc) => (
-          <Box key={doc._id} mb={1}>
+          <Box key={doc._id} sx={{ mb: 1 }}>
             <DocumentCard
               doc={doc}
               selected={selectedId === doc._id}
@@ -71,13 +71,17 @@ function SidebarContent({
 
       {/* Agent Legend */}
       <Box sx={{ p: 2.5, borderTop: '1px solid', borderColor: 'grey.800' }}>
-        <Typography variant="subtitle2" color="text.secondary" display="block" mb={1.5} letterSpacing="0.1em">
+        <Typography
+          variant="subtitle2"
+          color="text.secondary"
+          sx={{ display: 'block', mb: 1.5, letterSpacing: '0.1em' }}
+        >
           ACTIVE AGENTS
         </Typography>
         {['Router', 'Analyzer', 'Summary', 'Q&A'].map((a) => (
           <Box key={a} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
             <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: 'success.main', flexShrink: 0 }} />
-            <Typography variant="body2" fontWeight={500}>{a} Agent</Typography>
+            <Typography variant="body2" sx={{ fontWeight: 500 }}>{a} Agent</Typography>
           </Box>
         ))}
       </Box>
@@ -117,7 +121,7 @@ export default function Home() {
               <MenuIcon />
             </IconButton>
             <AutoAwesomeIcon sx={{ color: 'primary.main' }} />
-            <Typography variant="h6" fontWeight={800} fontSize="1rem">
+            <Typography variant="h6" sx={{ fontWeight: 800, fontSize: '1rem' }}>
               PDF Intelligence
             </Typography>
           </Toolbar>
@@ -181,7 +185,7 @@ export default function Home() {
             }}
           >
             <AutoAwesomeIcon sx={{ fontSize: { xs: 56, md: 80 }, color: 'primary.main' }} />
-            <Typography variant="h4" fontWeight={800} sx={{ fontSize: { xs: '1.6rem', md: '2rem' } }}>
+            <Typography variant="h4" sx={{ fontWeight: 800, fontSize: { xs: '1.6rem', md: '2rem' } }}>
               Upload a PDF to get started
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 480 }}>
